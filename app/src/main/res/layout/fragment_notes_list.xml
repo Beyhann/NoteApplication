@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NotesListFragment"
+        >
+
+        <!--Search view for filtering list view-->
+        <SearchView
+            android:id="@+id/idSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:iconifiedByDefault="false"
+            android:padding="4dp"
+            android:queryHint="Search Notes"
+          />
+
+        <!--recycler view for displaying all notes-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notesRV"
+            android:layout_below="@id/idSV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/custom_listview"
+
+            />
+
+
+        <!--fab for adding a new note-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idFAB"
+            android:layout_width="106dp"
+            android:layout_height="108dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:contentDescription="@string/addIconDesc"
+            android:src="@drawable/ic_add"
+            android:visibility="visible"
+            app:backgroundTint="@color/green"
+            app:borderWidth="1dp"
+            app:tint="@color/white"
+            tools:ignore="ImageContrastCheck" />
+    </RelativeLayout>
+
+</layout>

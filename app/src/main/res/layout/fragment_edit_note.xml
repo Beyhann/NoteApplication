@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".EditNoteFragment">
+
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/BackIcon"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintEnd_toStartOf="@+id/imgFav"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+
+            <!--FAB for saving and updating a note-->
+
+            <!--FAB for saving and updating a note-->
+
+            <ImageView
+                android:id="@+id/imgFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/FavoriteImg"
+                android:src="@drawable/ic_favorite_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.958"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+
+            <EditText
+                android:id="@+id/idEdtNoteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/note_title"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gri"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgBack"
+                tools:ignore="TextContrastCheck" />
+
+            <ImageView
+                android:id="@+id/noteImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/NoteImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.141"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idEdtNoteTitle" />
+
+            <EditText
+                android:id="@+id/idEdtNoteDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:gravity="start|top"
+                android:hint="@string/note_description"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gri"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/noteImg"
+                tools:ignore="TextContrastCheck" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/idFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="104dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/green"
+                android:contentDescription="@string/saveIconDesc"
+                android:src="@drawable/ic_save"
+                android:visibility="visible"
+                app:backgroundTint="@color/green"
+                app:borderWidth="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/idImgFAB"
+                app:layout_constraintTop_toBottomOf="@+id/idEdtNoteDesc"
+                app:layout_constraintVertical_bias="1.0"
+                app:tint="@color/white"
+                tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/idImgFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/saveIconDesc"
+                android:src="@drawable/ic_add_image"
+                android:visibility="visible"
+                app:backgroundTint="@color/white"
+
+                app:elevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idEdtNoteDesc"
+                app:layout_constraintVertical_bias="1.0"
+                app:tint="@color/gri"
+                tools:ignore="ImageContrastCheck" />
+            <!-- android:background="@drawable/custom_button_back"-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
